@@ -5,7 +5,6 @@ import Image from 'next/image';
 import ProductsList from '@/components/ProductsList';
 import Slider from '@/components/Slider';
 import Link from 'next/link';
-import BasicGrid from '@/components/ui/grid';
 
 
 const HomePage = () => {
