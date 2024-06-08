@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar-track {
+  background: #FF6000; /* Color of the scrollbar track */
+  border-radius: 10px; /* Optional: To make the track rounded */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 239, 230, 1); /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Optional: To make the thumb rounded */
+}
+
+body {
+  height: 300vh;
+}
+
+#footer {
+  border-top-width: 7px;
+  
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  padding:0;
+}
+
+@media (min-width: 1306px) {
+  .container {
+      width: 1280px
+  }
+}
+
+@media (min-width: 1636px) {
+  .container {
+      width: 1536px;
+  }
+}
