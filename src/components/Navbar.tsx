@@ -22,7 +22,7 @@ const Navbar = () => {
           {
             routes.map((e) => {  
               return (
-                <Link href={e.path} className={`font-semibold hover:text-black ${e.path === pathname ? "text-black" : "text-font-gray" }`}>
+                <Link href={e.path} key={e.label} className={`font-semibold hover:text-black ${e.path === pathname ? "text-black" : "text-font-gray" }`}>
                   { e.label }
                 </Link>
               )

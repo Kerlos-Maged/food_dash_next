@@ -14,15 +14,11 @@ function calculateStarRating(rating: number) {
 
 
 export default function BasicRating({rate}: {rate: number}) {
-  const [value, setValue] = React.useState<number | null>(2);
 
-  React.useEffect(()=>{
-    setValue(calculateStarRating(rate))
-  }, [])
 
   return (
     <Box sx={{'& > legend': { mt: 2 },}}>
-      <Rating name="read-only" value={value} readOnly />
+      <Rating name="read-only" value={calculateStarRating(rate)} readOnly />
     </Box>
   );
 }
