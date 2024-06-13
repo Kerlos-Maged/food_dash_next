@@ -12,7 +12,7 @@ import Image from 'next/image'
 const Slider = () => {
   return (
     <section className='py-12 bg-l_orange '>
-      <Carousel  opts={{ loop: true, }}   plugins={[Autoplay({delay: 2000,}), ]}>
+      <Carousel  opts={{ loop: true, }}  plugins={[Autoplay({delay: 2000,}), ]}>
         <CarouselContent>
           {
             regions.map((e)=>{
