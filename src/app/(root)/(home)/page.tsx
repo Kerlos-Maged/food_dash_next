@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
 import React from 'react'
-import { advas, foodArray, offers, regions } from '../../../constants'
+import { advas, foodArray, products, types } from '../../../../constants'
 import Image from 'next/image';
 import ProductsList from '@/components/ProductsList';
 import Slider from '@/components/Slider';
@@ -11,12 +11,12 @@ const HomePage = () => {
   return (
     <>
       {/* HERO CONTAINER  */}
-      <section className='h-[calc(100vh_-_80px)] bg-l_orange'>
+      <section className='min-h-[calc(100vh_-_80px)] flex items-center justify-center py-12 h-max bg-l_orange' >
         {/* HERO CONTAINER  */}
-        <div className="relative container h-full flex lg:flex-row justify-between items-center flex-col">
+        <div className="relative container h-full flex lg:flex-row justify-between items-center flex-col gap-4">
           {/* TEXT CONTAINER  */}
           <div className="lg:w-1/2 flex flex-col gap-8 lg:text-start w-full text-center h-1/2 items-center lg:items-start justify-center">
-            <h1 className='md:text-6xl text-5xl font-extrabold lg:leading-[80px] text-font-active max-w-[700px]'>
+            <h1 className='md:text-6xl text-3xl font-extrabold lg:leading-[80px] text-font-active max-w-[700px]'>
               <span className='text-primary'>Quick </span>and<span className='text-primary'> Tasty</span> 
               <span className='text-primary'>Food Delivered </span>with <span className='text-primary'>a Dash of Speed</span>
             </h1>
@@ -32,7 +32,7 @@ const HomePage = () => {
         </div>
       </section>
       {/* ADVANTAGES CONTAINER  */}
-      <section className="h-fit lg:absolute relative w-full container lg:left-1/2 transform lg:-translate-x-1/2 lg:-bottom-10 md:bg-white rounded-2xl shadow-[#929292] md:shadow-lg">
+      <section className="h-fit lg:absolute relative w-full container lg:left-1/2 transform lg:-translate-x-1/2 lg:-bottom-20 md:bg-white rounded-2xl shadow-[#929292] md:shadow-lg">
         <div className="mt-8 size-full lg:py-5 lg:mt-0 lg:px-4 py-12 flex items-center justify-center flex-wrap md:gap-0 gap-8">
           {
             advas.map((e) => { 
@@ -58,8 +58,8 @@ const HomePage = () => {
           <div className="container flex flex-col ">
             {/* HEAD CONTAINER  */}
             <div className="flex-col lg:flex-row text-center lg:text-start flex justify-between items-center gap-4">
-              <h2 className='lg:leading-relaxed  font-extrabold text-5xl'>Our <span className='text-primary'>Best Delivered</span> <br /> Indian Dish</h2>
-              <p className='text-font-p text-lg'>It’s Not Just About Bringing You Good Food <br /> From Restaurants, We Deliver You Experience</p>
+              <h2 className='lg:leading-relaxed font-extrabold md:text-5xl text-4xl'>Our <span className='text-primary'>Best Delivered</span> <br /> Indian Dish</h2>
+              <p className='text-font-p md:text-lg max-w-[200px]'>It’s Not Just About Bringing You Good Food From Restaurants, We Deliver You Experience</p>
             </div>
             {/* ITEMS CONTAINER  */}
             <div className="mt-12 flex gap-8 flex-wrap items-center lg:justify-between justify-center py-12">
@@ -93,12 +93,12 @@ const HomePage = () => {
         <div className="container">
           <div className="flex-col lg:flex-row text-center lg:text-start flex justify-between items-center gap-8">
             <div className="flex flex-col lg:gap-2 gap-8">
-              <h2 className='lg:leading-relaxed  font-extrabold text-5xl'>Our <span className='text-primary'>Regular</span> Menu</h2>
-              <p className='text-font-p text-lg'>There Are Our Regular Menus.<br /> You Can Order Anything You Like.</p>
+              <h2 className='lg:leading-relaxed  font-extrabold md:text-5xl text-4xl'>Our <span className='text-primary'>Regular</span> Menu</h2>
+              <p className='text-font-p md:text-lg'>There Are Our Regular Menus.<br /> You Can Order Anything You Like.</p>
             </div>
             <Button className={'text-lg px-8'} variant={'primary'}>See All</Button>
           </div>
-          <ProductsList/>
+          <ProductsList type={types.BUY} limit={products.length}/>
         </div>
       </section>
       {/* OFFERS PAGE  */}
@@ -113,7 +113,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      
     </>
   )
 }

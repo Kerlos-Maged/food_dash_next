@@ -12,13 +12,15 @@
   border-radius: 10px; /* Optional: To make the thumb rounded */
 }
 
-body {
-  height: 300vh;
-}
-
 #footer {
   border-top-width: 7px;
   
+}
+
+.lucide-x {
+  color: #FF6000;
+  width: 40px;
+  height: 40px;
 }
 
 .container {

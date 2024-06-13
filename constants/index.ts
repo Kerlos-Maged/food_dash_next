@@ -1,3 +1,13 @@
+export enum types {
+  BUY = 'BUY',
+  ADDTOCART = 'ADDTOCART'
+}
+
+export interface ProductsListProps {
+  type: types;
+  limit: number;
+}
+
 export const routes = [
   {
     label: 'Home',
@@ -121,5 +131,20 @@ export const offers = [
   {
     id:3 ,
     img: '/offer3.png'
+  }
+]
+
+export const fakeData = [ 
+  {
+    name: "Best Popular Indian Dish",
+    limit: 3
+  },
+  {
+    name: '"Snacks Menu"',
+    limit: 4
+  },
+  {
+    name: "Regular Menu",
+    limit: 6  
   }
 ]
