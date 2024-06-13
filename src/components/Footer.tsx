@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="">
             <h2 className="text-3xl text-primary font-extrabold">Follow Us On</h2>
             <div className="mt-6 flex gap-6">
-              <Link href={'/'}><Image src='/facebook.png' alt='' width={28} height={28} className='cursor-pointer'/></Link>
+              <Link href={'/'}><Image src='/facebook.png' alt='facebook' width={28} height={28} className='cursor-pointer'/></Link>
               <Link href={'/'}><Image src='/instagram.png' alt='' width={28} height={28} className='cursor-pointer'/></Link>
               <Link href={'/'}><Image src='/twitter.png' alt='' width={28} height={28} className='cursor-pointer'/></Link>
               <Link href={'/'}><Image src='/linkedin.png' alt='' width={28} height={28} className='cursor-pointer'/></Link>
