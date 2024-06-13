@@ -21,6 +21,7 @@ const config = {
       colors: {
         primary: '#FF6000',
         l_orange: 'rgba(255, 239, 230, 1)',
+        border: '#DFDFDF',
         font: {
           black: '#2A2A2A',
           h: '#929292',
@@ -42,6 +43,9 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+      },
+      backgroundImage: {
+        'bg-1': "url('/bg.png')",
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
